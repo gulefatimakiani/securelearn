@@ -1,0 +1,119 @@
+
+{% extends "base/3-col-template.html" %}
+
+
+{% block content-left %}
+{% include "base/secondary-navbar.html" %}
+{% endblock %}
+
+
+{% block content-mid %}
+
+<div class="tutorial center mx-auto gradient-bg">
+    <div class="text-muted">{{ post.author }}</div>
+    <div class="text-muted">{{ post.category }}</div>
+    <div class="text-muted pb-2">{{ post.updated_at}}</div>
+    <h1 class="fw-bold pb-2" style="background-color: greenyellow; color: black">{{ post.title }}</h1>
+    <div class="container-fluid">
+        <img src="../{{ post.image }}" class="img-fluid">
+    </div>
+    <div class="post">
+         <!-- The use of `| safe` is intentional as the `post.content` is assumed to be sanitized during the markdown rendering process. -->
+        <p class="pb-4">{{ post.content | markdown | safe }}</p>
+    </div>
+</div>
+        <br>
+        <br>
+
+
+       
+        <h2>Average Rating: 
+          <!--  This part takes the string "x" and left-justifies it, padding it with spaces on the right to make its length equal to post.average_rating. -->
+            {% for _ in "x"|ljust:post.average_rating|default:0 %}
+            <span style="color:greenyellow;">★</span> 
+            {% endfor %}
+        </h2>
+    
+        {% if user.is_authenticated %}
+            <form id="rating-form" method="post" action="{% url 'rate_tutorial' %}">
+            {% csrf_token %}
+            {{ rating_form.as_p }}
+            <input type="hidden" name="tutorial_slug" value="{{ post.slug }}">
+            <button type="submit" class="primary" style = "background-color: greenyellow; color: black;">Rate</button>
+            </form>
+            
+        {% else %}
+             <p>Login to submit a rating.</p>
+        {% endif %}
+        
+    
+        <br>
+        <br>
+
+        <!-- User can only see and add comments, if he is logged in and authenticated-->
+        {% if user.is_authenticated %} 
+            <h3>{{number_of_comments }} Comments</h3>
+            <hr>
+            <p><a class = "btn" style="background-color:greenyellow; color:black;" href="add_comment/"> Add Comment </a></p>
+            {% if not post.comments.all %}
+                <p>No Comments Yet</p>
+            {% else %}
+                <section>
+                    <div class="container">
+                    
+                            {% for comment in post.comments.all %}
+                                <div class="col-sm-5 col-md-6 col-12 pb-4">
+                                    
+                                    <div class="comment-container">
+                                        <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle comment-img" width="40" height="40">
+                                        <div class="comment-content">
+                                            <h4>{{ comment.name }}</h4>
+                                            <span>{{ comment.created_at }}</span>
+                                        
+                                            <p>{{ comment.body }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        
+                    </div>
+                </section>
+            {% endif %}
+        {% else %}
+                <p>You must be <a href="../login/">logged in</a> to comment.</p>
+        {% endif %}
+
+            
+
+
+{% endblock %}
+
+
+
+{% block content-right %}
+    <div class="col-12">
+        <div class="pb-5">More from this author</div>
+            {% for tutorial in related %}
+                <a class="text-decoration-none" href="{{ tutorial.get_absolute_url }}">
+                    <div class="rscard-wrapper pt-3 ">
+                    <div class="card mb-3 border-0 ps-1 rscards">
+                        <div class="row">
+                            <div class="col-9 pe-2 pb-5">
+                                <h6 class="text-dark small">{{tutorial.author}}</h6>
+                                <span class="mb-1 fs-6 p-0 text-dark fw-bold ">{{ tutorial.title|truncatechars:80 }}</span>
+                            </div>
+                            <div class="col-3">
+                                <img src="../{{tutorial.image}}" class="img-fluid float-end">
+                            </div>
+                        </div>
+                    </div> 
+                    <hr>
+                </div>
+                </a>
+            {% endfor %}
+            
+        </div>
+    </div>
+{% endblock %}
+
+

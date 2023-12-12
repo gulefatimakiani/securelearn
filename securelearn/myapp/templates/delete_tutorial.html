@@ -1,0 +1,37 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+   delete tutorial
+{% endblock %}
+
+{% block content %}
+
+<style>
+social-link {
+ width: 30px;
+ height: 30px;
+ border: 1px solid #ddd;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #666;
+ border-radius: 50%;
+ transition: all 0.3s;
+ font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+ background: #ddd;
+ text-decoration: none;
+ color: #555;
+}
+
+</style>
+
+<p> Are you sure you want to delete "{{post}}"?</p>
+<form method="POST" action="{{post.slug}}">
+     {% csrf_token %} <!-- This is django built-in security mechanism to protect against CSRF attacks-->
+     <a class = "btn btn-primary" href = "/manage_posts">Cancel</a>
+     <button type="submit">Confirm</button>
+{% endblock %}

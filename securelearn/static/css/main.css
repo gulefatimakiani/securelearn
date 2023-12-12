@@ -1,0 +1,517 @@
+/* GOOGLE FONTS FOR LOGO */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ephesis&family=Roboto+Mono:wght@100&display=swap');
+
+/* MAIN FONT FOR WEBSITE */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200;1,400&display=swap');
+
+/* FONT FOR JOKES SECTION */
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+
+/* base styles for all pages */
+html,
+body{
+  font-family: 'Roboto Mono', monospace; 
+  
+}
+
+a {
+  background-color: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* navbar styles */
+.namedisplay{
+  font-size: 18px;
+  color: black;
+  margin-right: 20px;
+
+}
+/*Website Logo */
+
+
+
+.logo {
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Ephesis', cursive;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: -2px;
+ 
+  
+}
+
+
+/* start reading button on splash */
+
+.button {
+    background-color: greenyellow;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  
+  .button:hover {
+    background-color: darkgreen;
+  }
+
+
+/* index page styles */
+.card-hover-effect {
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.card-hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Lets read BUTTON on card*/
+.readme{
+  color: black;
+  background-color: greenyellow;
+  border-color: greenyellow;
+  border-radius: 20px;
+}
+
+/* card body gradient */
+
+/* .gradient-bg {
+  background: linear-gradient(to bottom, #dddddd,salmon); 
+  color: white; 
+} */
+
+
+.gradient-bg:hover {
+  background: linear-gradient(to bottom, #aaaaaa, salmon); 
+} 
+
+
+
+
+/* all tutorials page */
+
+.infscroll-title {
+  font-size:22px;
+  letter-spacing: -0.6px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .infscroll-title {
+    font-size:18px;
+    letter-spacing: -0.6px;
+  }
+}
+
+.infscroll-title {
+  font-size:0.9375rem;
+  letter-spacing: -0.0px;
+}
+
+.infscroll-author,
+.infscroll-date {
+  font-size:0.8125rem;
+  
+}
+
+/* single tutorial page */
+
+/* more from this author */
+
+.rscard-wrapper {
+  overflow: hidden;
+}
+
+.rscards {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rscards:hover {
+  background-color: greenyellow;
+  transform: scale(0.95);
+  transform-origin: center top; 
+}
+
+/* resgiter page */
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: black;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background:black;
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: black;
+  }
+  
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  background-color: greenyellow;
+  color: blue;  
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+
+
+  /* login page */
+  .user_card {
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: black;
+          color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+  }
+
+  .form_container {
+    margin-top: 20px;
+  }
+
+  #form-title{
+    color: #fff;
+    
+  }
+
+  .login_btn {
+    width: 100%;
+    background: greenyellow !important;
+    color: black !important;
+  }
+  .login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+  .login_container {
+    padding: 0 2rem;
+  }
+  .input-group-text {
+    background: black !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+  }
+  .input_user,
+  .input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+
+  #messages{
+    background-color: grey;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+
+  /* tutorial detail panel */
+
+    .tutorial {
+        max-width: 763px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff; 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    .tutorial h1 {
+        letter-spacing: -0.6px;
+    }
+
+    .text-muted {
+        color: #555;
+    }
+
+    .post {
+        margin-top: 20px;
+    }
+
+    .comment-container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .comment-img {
+        margin-right: 10px;
+        border-radius: 50%; 
+    }
+
+    .comment-content {
+        max-width: 400px;
+    }
+
+
+/* manage Posts page */
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+}
+.l-bg-cherry {
+  background: linear-gradient(to right, #493240, #f09) !important;
+  color: #fff;
+}
+
+
+
+.card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+  font-size: 110px;
+}
+
+.card .card-statistic-3 .card-icon {
+  text-align: center;
+  line-height: 50px;
+  margin-left: 15px;
+  color: #000;
+  position: absolute;
+  right: -5px;
+  top: 20px;
+  opacity: 0.1;
+}
+
+.l-bg-cyan {
+  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  color: #fff;
+}
+
+.l-bg-green {
+  background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+  color: #fff;
+}
+
+.l-bg-orange {
+  background: linear-gradient(to right, #f9900e, #ffba56) !important;
+  color: #fff;
+}
+
+.l-bg-cyan {
+  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  color: #fff;
+}
+
+
+/* our team social icons */
+
+social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }
+
+
+  .section_our_solution .row {
+    align-items: center;
+  }
+  
+  .our_solution_category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .our_solution_category .solution_cards_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .solution_cards_box .solution_card {
+    flex: 0 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 265px;
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover {
+    background: #309df0;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+  }
+  
+  .solution_cards_box .solution_card:hover::before {
+    background: rgb(85 108 214 / 10%);
+  }
+  
+  .solution_cards_box .solution_card:hover .solu_title h3,
+  .solution_cards_box .solution_card:hover .solu_description p {
+    color: #fff;
+  }
+  
+  .solution_cards_box .solution_card:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+  }
+  
+  .solution_cards_box .solution_card:hover .solu_description button {
+    background: #fff !important;
+    color: #309df0;
+  }
+  
+  .solution_card .so_top_icon {
+  }
+  
+  .solution_card .solu_title h3 {
+    color: #212121;
+    font-size: 1.3rem;
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  
+  .solution_card .solu_description p {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .solution_card .solu_description button {
+    border: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+      140deg,
+      #42c3ca 0%,
+      #42c3ca 50%,
+      #42c3cac7 75%
+    ) !important;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 16px;
+  }
+  
+  .our_solution_content h1 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  .our_solution_content p {
+  }
+  
+  .hover_color_bubble {
+    position: absolute;
+    background: rgb(54 81 207 / 15%);
+    width: 100rem;
+    height: 100rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: 16rem;
+    border-radius: 50%;
+    transform: rotate(-36deg);
+    left: -18rem;
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover .hover_color_bubble {
+    top: 0rem;
+  }
+  
+  .solution_cards_box .solution_card .so_top_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .solution_cards_box .solution_card .so_top_icon img {
+    width: 40px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  /*start media query*/
+  @media screen and (min-width: 320px) {
+    .sol_card_top_3 {
+      position: relative;
+      top: 0;
+    }
+  
+    .our_solution_category {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .our_solution_category .solution_cards_box {
+      flex: auto;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .our_solution_category .solution_cards_box {
+      flex: 1;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .sol_card_top_3 {
+      position: relative;
+      top: -3rem;
+    }
+    .our_solution_category {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  
+
+

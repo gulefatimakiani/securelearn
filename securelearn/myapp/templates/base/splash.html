@@ -1,0 +1,43 @@
+<style>
+
+@keyframes bounceInDown {
+  0%, 20%, 50%, 80%, 100% {
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      transform: translateY(0);
+  }
+  40% {
+      transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      transform: translateY(-30px);
+  }
+  60% {
+      transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+      transform: translateY(-50px);
+  }
+}
+
+.falling-header {
+  animation: bounceInDown 1s; 
+}
+
+</style>
+
+
+<div class="border-bottom border-2 border-dark">
+    <div class = "container-fluid" style="background-color:black; color:white;">
+
+        <div class="container py-5" >
+            <div class="row">
+              <div class="col-6 py-1 py-md-5">
+                <h1 class="display-1 falling-header" style="color: white;">SECURE TALK.</h1>
+                <p class="fs-4 lh-1 text-muted fw-bold pb-5" style="color: white;">No nonsense tutorials, tips and blogs from our writers on cyber security topics.</p>
+
+              
+
+               <a href="tutorials/" ><button class="button">Start Reading</button></a>
+
+              </div>
+            </div>
+          </div>
+        
+</div>
+</div>

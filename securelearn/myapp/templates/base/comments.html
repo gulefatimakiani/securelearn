@@ -1,0 +1,15 @@
+
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+
+<h2>Comments</h2>
+{% for comment in comments %}
+    <p>{{ comment.text }}</p>
+{% endfor %}
+
+{% if user.is_authenticated %}
+    <!-- Add comment form here for logged-in users -->
+    <!-- Add comment form code here -->
+{% else %}
+    <p>Login to add comments.</p>
+{% endif %}
